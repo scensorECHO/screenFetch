@@ -4036,6 +4036,13 @@ infoDisplay () {
 		mygpu=$(echo -e "$labelcolor GPU:$textcolor $cpu"); out_array=( "${out_array[@]}" "$mygpu" )
 		mymem=$(echo -e "$labelcolor RAM:$textcolor $mem"); out_array=( "${out_array[@]}" "$mymem" )
 	else
+		# Variable testing for Scientific Linux
+		echo -e "distro = $distro"
+		echo -e "distro_more = $distro_more"
+		echo -e "sysArch = $sysArch"
+		echo -e "prodVers = $prodVers"
+		echo -e "buildVers = $buildVers"
+
 		if [[ "${display[@]}" =~ "host" ]]; then myinfo=$(echo -e "${labelcolor}${myUser}$textcolor${bold}@${c0}${labelcolor}${myHost}"); out_array=( "${out_array[@]}" "$myinfo" ); ((display_index++)); fi
 		if [[ "${display[@]}" =~ "distro" ]]; then
 			if [ "$distro" == "Mac OS X" ]; then
