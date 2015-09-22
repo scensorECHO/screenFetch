@@ -4037,11 +4037,12 @@ infoDisplay () {
 		mymem=$(echo -e "$labelcolor RAM:$textcolor $mem"); out_array=( "${out_array[@]}" "$mymem" )
 	else
 		# Variable testing for Scientific Linux
-		echo -e "distro = $distro"
-		echo -e "distro_more = $distro_more"
-		echo -e "sysArch = $sysArch"
-		echo -e "prodVers = $prodVers"
-		echo -e "buildVers = $buildVers"
+		# echo -e "distro = $distro"
+		# echo -e "distro_more = $distro_more"
+		# echo -e "sysArch = $sysArch"
+		# echo -e "prodVers = $prodVers"
+		# echo -e "buildVers = $buildVers"
+		distro_more=""
 
 		if [[ "${display[@]}" =~ "host" ]]; then myinfo=$(echo -e "${labelcolor}${myUser}$textcolor${bold}@${c0}${labelcolor}${myHost}"); out_array=( "${out_array[@]}" "$myinfo" ); ((display_index++)); fi
 		if [[ "${display[@]}" =~ "distro" ]]; then
